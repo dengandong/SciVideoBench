@@ -1,7 +1,5 @@
 # SciVideoBench: A Scientific Video Reasoning Benchmark for Multimodal LLMs  
 
-**The First-Ever Benchmark for Scientific Video Reasoning and Understanding**  
-
 [📄 Project Page](https://scivideobench.github.io/) | [📑 arXiv Paper]() | [📂 Dataset](https://huggingface.co/datasets/groundmore/scivideobench)
 
 ---
@@ -11,6 +9,23 @@
 Scientific experiments present unique challenges for video-language models (VLMs): precise perception of visual details, integration of multimodal signals (video, audio, transcripts), and complex reasoning across temporal scales. To address this gap, we introduce **SciVideoBench**, the first comprehensive benchmark dedicated to **scientific video reasoning**.  
 
 SciVideoBench evaluates models across **Physics, Chemistry, Biology, and Medicine**, covering both **perceptual understanding** and **high-level reasoning** tasks. It provides a rigorous benchmark for evaluating long-form video reasoning in domains where accuracy and explainability matter most.  
+
+
+<p align="center">
+  <img src="figs/teaser.png" alt="SciVideoBench Overview" width="100%">
+</p>
+
+*Figure 1: The overall design of SciVideoBench, showing multi-stage data construction, annotation protocol, and evaluation pipeline.*  
+
+---
+
+## 🎥 Dataset Examples
+
+<p align="center">
+  <img src="figs/example.png" alt="SciVideoBench Dataset Examples" width="100%">
+</p>
+
+*Figure 2: Examples of SciVideoBench videos and their associated QA pairs across Physics, Chemistry, Biology, and Medicine.*  
 
 ---
 
@@ -80,15 +95,29 @@ pip install -U lmms-eval
 
 ### 2) Repo Layout
 
+After cloning **lmms-eval**, place the `scivideobench/` folder under `tasks/`:
+
 ```
-scivideobench/
-  configs/
-    scivideobench.yaml        # ✅ task definition
-  scivideobench/
-    utils.py                  # ✅ dataloader, metrics, post-processing
-  data/
-    scivideobench.jsonl       # QA annotations
+lmms-eval/
+  tasks/
+    ├── activitynetqa/
+    ├── ai2d/
+    ├── aime/
+    ├── air_bench/
+    ├── ...
+    ├── scivideobench/              # ✅ our benchmark lives here
+    │   ├── scivideobench.yaml      # task definition(s) for evaluation
+    │   ├── utils.py                # dataset loader, metrics, post-processing
+    │   └── (optional) extra yaml   # if you split configs (chat, cot, etc.)
+  ...
 ```
+
+- **`scivideobench.yaml`** → Defines how `lmms-eval` loads SciVideoBench (dataset path, media fields, eval settings).  
+- **`utils.py`** → Custom dataloader + evaluation metrics (accuracy, tIoU, discipline/type breakdown).  
+- You can create multiple YAMLs (e.g., `scivideobench_chat.yaml`, `scivideobench_cot.yaml`) if you want variants, similar to how `air_bench` has multiple YAMLs.  
+
+This way, SciVideoBench becomes a **first-class task** inside `lmms-eval`.  
+
 
 ### 3) Quick Start
 
