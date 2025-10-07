@@ -166,10 +166,10 @@ Please send an email to **andong.deng@ucf.edu** for inquiries. ✨
 If you use SciVideoBench, please cite our paper:  
 
 ```bibtex
-@article{deng2025scivideobench,
-  title={SciVideoBench: A Scientific Video Reasoning Benchmark for Multimodal LLMs},
-  author={Deng, Andong and et al.},
-  journal={arXiv preprint arXiv:2504.xxxxx},
-  year={2025}
-}
+    @article{deng2025scivideobench,
+        title={SciVideoBench: Benchmarking Scientific Video Reasoning in Large Multimodal Models},
+        author={Andong Deng and Taojiannan Yang and Shoubin Yu and Lincoln Spencer and Mohit Bansal and Chen Chen and Serena Yeung-Levy and Xiaohan Wang},
+        journal={arXiv preprint arXiv:2501.XXXX},
+        year={2025}
+    }
 ```
