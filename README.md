@@ -144,9 +144,3 @@ If you use SciVideoBench, please cite our paper:
   year={2025}
 }
 ```
-
----
-
-## 🙌 Acknowledgements  
-
-SciVideoBench is developed at the **Center for Research in Computer Vision (CRCV), UCF**, with contributions from graduate-level annotators across Physics, Chemistry, Biology, and Medicine.  
