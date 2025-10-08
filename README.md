@@ -167,7 +167,7 @@ accelerate launch --num_processes 8 --main_process_port 12380 -m lmms_eval \
 > Without prior approval, you cannot distribute, publish, copy, disseminate, or modify SciVideoBench.  
 > You must strictly comply with the above restrictions.  
 
-Please send an email to **andong.deng@ucf.edu** for inquiries. ✨
+Please send an email to **andongdeng69@gmail.com** for inquiries. ✨
 
 
 ## ✨ Citation  
