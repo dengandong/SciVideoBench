@@ -121,29 +121,17 @@ This way, SciVideoBench becomes a **first-class task** inside `lmms-eval`.
 
 ### 3) Quick Start
 
-**API models (OpenAI, Azure, Gemini)**  
+**Local Hugging Face models (Qwen2.5-VL, InternVL-3, etc.)**  
 
 ```bash
-export OPENAI_API_KEY=...
-export GEMINI_API_KEY=...
-
-lmms-eval \
-  --model openai/gpt-4o \
-  --tasks scivideobench \
-  --config configs/scivideobench.yaml \
-  --output_dir results/gpt4o
-```
-
-**Local Hugging Face models (Qwen2.5-VL, InternVL-3)**  
-
-```bash
-lmms-eval \
-  --model hf/Qwen/Qwen2.5-VL-7B-Instruct \
-  --tasks scivideobench \
-  --config configs/scivideobench.yaml \
-  --output_dir results/qwen25vl_7b \
-  --device cuda \
-  --max_samples -1
+accelerate launch --num_processes 8 --main_process_port 12380 -m lmms_eval \
+    --model internvl3 \
+    --config lmms-eval/lmms_eval/tasks/scivideobench/scivideobench.yaml \
+    --model_args pretrained=OpenGVLab/InternVL3-2B,modality=video,num_frame=32 \
+    --gen_kwargs=max_new_tokens=1024 \
+    --tasks scivideobench \
+    --batch_size 1 \
+    --log_samples \
 ```
 ---
 
