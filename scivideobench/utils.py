@@ -184,7 +184,7 @@ def scivideobench_aggregate_results(results):
     for k, v in printable_qtype.items():
         print(f"{k}: {v['acc']}% (samples: {v['num']})")
 
-    print("\nStatistics by Category:")
+    print("\nStatistics by Discipline:")
     for k, v in printable_category.items():
         print(f"{k}: {v['acc']}% (samples: {v['num']})")
 
