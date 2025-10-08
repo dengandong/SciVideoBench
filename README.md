@@ -83,9 +83,9 @@ Example QA format:
 
 > Evaluation results of proprietary and open-source models on **SciVideoBench** (%, higher is better).  
 
-| Models                     | Overall | **Question Type** |   |   | **Discipline** |   |   |   |
-|----------------------------|:------:|:----------:|:------------:|:------------:|:------:|:---------:|:--------:|:------:|
-|                            |        | Conceptual | Hypothetical | Quantitative | Biology | Chemistry | Medicine | Physics |
+| Models                 | Overall |        **Question Type**        |       |       |              **Discipline**              |       |       |       |
+|-------------------------|:------:|:-------------------------------:|:-----:|:-----:|:----------------------------------------:|:-----:|:-----:|:-----:|
+|                         |        | Conceptual | Hypothetical | Quantitative | Biology | Chemistry | Medicine | Physics |
 | **Random Guess**           | 10.00  | 10.00      | 10.00        | 10.00        | 10.00  | 10.00     | 10.00    | 10.00  |
 | **Human Evaluation**       | 17.40  | 18.11      | 18.70        | 14.29        | 15.88  | 16.06     | 21.19    | 18.88  |
 | Gemini-2.5-Pro             | **64.30** | **69.73**  | **67.79**    | **50.61**        | **64.79** | **61.82** | **74.77** | **61.44** |
