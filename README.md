@@ -171,6 +171,8 @@ accelerate launch --num_processes 8 --main_process_port 12380 -m lmms_eval \
 ➡️ **Access requirement:** Please complete and sign our **Dataset Access Agreement** before using SciVideoBench:  
 **[🔏 Google Form — SciVideoBench Dataset Access Agreement](https://docs.google.com/forms/d/e/1FAIpQLSdGoaIO2SKNi7eix2hv-JbqSyuubh--kQAQWHp86a55pKKb7A/viewform?usp=dialog)**
 
+The SciVideoBench is available in [HuggingFace](https://huggingface.co/datasets/groundmore/scivideobench).
+
 For any questions, contact **andongdeng69@gmail.com**.
 
 
