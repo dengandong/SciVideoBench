@@ -83,7 +83,7 @@ Example QA format:
 
 SciVideoBench integrates directly with **[lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)** using our task YAML and utils.py.
 
-### 1) Install
+### 1) Install (Please refer to lmms-eval)
 
 ```bash
 # lmms-eval + vision extras
@@ -113,10 +113,8 @@ lmms-eval/
 ```
 
 - **`scivideobench.yaml`** → Defines how `lmms-eval` loads SciVideoBench (dataset path, media fields, eval settings).  
-- **`utils.py`** → Custom dataloader + evaluation metrics (accuracy, tIoU, discipline/type breakdown).  
+- **`utils.py`** → Custom dataloader + evaluation metrics (accuracy, discipline/reasoning type breakdown).  
 - You can create multiple YAMLs (e.g., `scivideobench_chat.yaml`, `scivideobench_cot.yaml`) if you want variants, similar to how `air_bench` has multiple YAMLs.  
-
-This way, SciVideoBench becomes a **first-class task** inside `lmms-eval`.  
 
 
 ### 3) Quick Start
