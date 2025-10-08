@@ -79,6 +79,28 @@ Example QA format:
 
 ---
 
+## 🏆 Leaderboard  
+
+> Evaluation results of proprietary and open-source models on **SciVideoBench** (%, higher is better).  
+
+| Models                     | Overall | **Question Type** |   |   | **Discipline** |   |   |   |
+|----------------------------|:------:|:----------:|:------------:|:------------:|:------:|:---------:|:--------:|:------:|
+|                            |        | Conceptual | Hypothetical | Quantitative | Biology | Chemistry | Medicine | Physics |
+| **Random Guess**           | 10.00  | 10.00      | 10.00        | 10.00        | 10.00  | 10.00     | 10.00    | 10.00  |
+| **Human Evaluation**       | 17.40  | 18.11      | 18.70        | 14.29        | 15.88  | 16.06     | 21.19    | 18.88  |
+| Gemini-2.5-Pro             | **64.30** | **69.73**  | **67.79**    | **50.61**        | **64.79** | **61.82** | **74.77** | **61.44** |
+| Gemini-2.5-Flash           | 46.40  | 50.81      | 44.16        | 43.27        | 44.01  | 49.70     | 55.14    | 44.83  |
+| InternVL-3-78B-Instruct    | 38.80  | 57.30      | 39.74        |  9.39        | 37.90  | 39.39     | 46.73    | 36.99  |
+| InternVL-3-78B             | 38.50  | 56.76      | 39.22        |  9.80        | 37.65  | 37.58     | 46.73    | 37.30  |
+| InternVL-3-38B             | 38.30  | 53.78      | 38.44        | 14.69        | 36.67  | 40.00     | 42.06    | 38.24  |
+| InternVL-3-38B-Instruct    | 37.30  | 52.43      | 37.14        | 14.69        | 35.94  | 39.39     | 40.19    | 36.99  |
+| InternVL-3-14B             | 35.70  | 53.51      | 35.32        |  9.39        | 35.94  | 33.94     | 38.32    | 35.42  |
+| Gemini-1.5-Pro             | 27.50  | 27.84      | 28.31        | 25.71        | 27.38  | 26.06     | 27.10    | 28.53  |
+| Gemini-2.0-Flash           | 25.70  | 28.38      | 24.94        | 22.86        | 24.69  | 26.06     | 22.43    | 27.90  |
+| GPT-4o                     | 24.90  | 30.27      | 28.05        | 11.84        | 21.52  | 29.70     | 31.78    | 24.45  |
+
+
+
 ## 🧪 Evaluation (via lmms-eval)
 
 SciVideoBench integrates directly with **[lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)** using our task YAML and utils.py.
