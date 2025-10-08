@@ -159,15 +159,19 @@ accelerate launch --num_processes 8 --main_process_port 12380 -m lmms_eval \
 
 ## 📂 Dataset  
 
-**License:**  
+**License & Access:**  
 
 > SciVideoBench is only used for **academic research**. Commercial use in any form is **strictly prohibited**.  
 > The copyright of all videos belongs to the **original video owners** and [JoVE](https://app.jove.com/).  
 > If there is any infringement in SciVideoBench, please email us and we will promptly remove the content.  
 > Without prior approval, you cannot distribute, publish, copy, disseminate, or modify SciVideoBench.  
-> You must strictly comply with the above restrictions.  
+> You must strictly comply with the above restrictions.
 
-Please send an email to **andongdeng69@gmail.com** for inquiries. ✨
+➡️ **Access requirement:** Please complete and sign our **Dataset Access Agreement** before using SciVideoBench:  
+**[🔏 Google Form — SciVideoBench Dataset Access Agreement](https://docs.google.com/forms/d/e/1FAIpQLSdGoaIO2SKNi7eix2hv-JbqSyuubh--kQAQWHp86a55pKKb7A/viewform?usp=dialog)**
+
+For any questions, contact **andongdeng69@gmail.com**.
+
 
 
 ## ✨ Citation  
