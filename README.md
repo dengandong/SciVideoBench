@@ -1,6 +1,7 @@
 # SciVideoBench: Benchmarking Scientific Video Reasoning in Large Multimodal Models
 
-[📄 Project Page](https://scivideobench.github.io/) | [📑 arXiv Paper]() | [📂 Dataset](https://huggingface.co/datasets/groundmore/scivideobench)
+[📄 Project Page](https://scivideobench.github.io/) | [📑 arXiv Paper]() | [📂 Dataset](#-dataset)
+
 
 ---
 
