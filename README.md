@@ -73,7 +73,7 @@ Example QA format:
   "question_type": "Conceptual Reasoning",
   "discipline": "Chemistry",
   "subject": "Nanomaterials",
-  "timestamp_breakdown": [...]
+  "timestamp_breakdown": ["..."]
 }
 ```
 
