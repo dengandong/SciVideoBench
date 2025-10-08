@@ -1,6 +1,6 @@
 # SciVideoBench: Benchmarking Scientific Video Reasoning in Large Multimodal Models
 
-[📄 Project Page](https://scivideobench.github.io/) | [📑 arXiv Paper]() | [📂 Dataset](#-dataset)
+[📄 Project Page](https://scivideobench.github.io/) | [📑 arXiv Paper]() | [📂 Dataset](#-license)
 
 
 ---
@@ -158,7 +158,7 @@ accelerate launch --num_processes 8 --main_process_port 12380 -m lmms_eval \
 ---
 
 
-## 📂 Dataset  
+## 📂 License
 
 **License & Access:**  
 
