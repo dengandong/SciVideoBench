@@ -120,57 +120,76 @@ def extract_answer_letter(s):
 def scivideobench_process_results(doc, results):
     pred = results[0].strip() if isinstance(results, list) else results.strip()
     pred = extract_answer_letter(pred)
-    if not pred:  
+    if not pred:
         pred = random.choice(["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"])
-    
+
     gold = doc["answer"].strip()
     correct = (pred == gold)
-    
+
     data_dict = {
         "id": doc["video_id"],
         "question_type": doc["question_type"],
+        "category": doc.get("category", "UNKNOWN"),
         "pred_answer": pred,
         "answer": gold,
         "correct": correct,
-        "raw_output": results[0] if isinstance(results, list) else results 
+        "raw_output": results[0] if isinstance(results, list) else results
     }
-    
+
     return {
         "scivideobench_acc": data_dict
     }
 
+
 def scivideobench_aggregate_results(results):
-    evaluation_result = defaultdict(lambda: {"correct": 0, "total": 0})
-    for result in results:
-        reasoning_style = result["question_type"]
-        evaluation_result[reasoning_style]["correct"] += 1 if result["correct"] else 0
-        evaluation_result[reasoning_style]["total"] += 1
-    
-    printable_results = {}
+    # Buckets
+    by_qtype = defaultdict(lambda: {"correct": 0, "total": 0})
+    by_category = defaultdict(lambda: {"correct": 0, "total": 0})
+
     total_correct = 0
     total_examples = 0
-    
-    # Statistics by reasoning style
-    for reasoning_style, stats in evaluation_result.items():
-        acc = stats["correct"] / stats["total"] if stats["total"] > 0 else 0
-        printable_results[reasoning_style] = {
-            "num": stats["total"],
-            "acc": round(acc * 100, 2)  # Convert to percentage
-        }
-        total_correct += stats["correct"]
-        total_examples += stats["total"]
-    
-    # Calculate overall accuracy
-    overall_acc = total_correct / total_examples if total_examples > 0 else 0
-    
-    # Print detailed statistics
-    print(f"\nSciVideoBench Evaluation Results:")
-    print(f"Overall Accuracy: {round(overall_acc * 100, 2)}%")
+
+    # Accumulate
+    for r in results:
+        qtype = r.get("question_type", "UNKNOWN")
+        cat = r.get("category", "UNKNOWN")
+        is_correct = 1 if r.get("correct", False) else 0
+
+        by_qtype[qtype]["correct"] += is_correct
+        by_qtype[qtype]["total"] += 1
+
+        by_category[cat]["correct"] += is_correct
+        by_category[cat]["total"] += 1
+
+        total_correct += is_correct
+        total_examples += 1
+
+    # Build printable summaries
+    def summarize(bucket):
+        out = {}
+        for k, v in bucket.items():
+            acc = (v["correct"] / v["total"]) if v["total"] > 0 else 0.0
+            out[k] = {"num": v["total"], "acc": round(acc * 100, 2)}
+        return out
+
+    printable_qtype = summarize(by_qtype)
+    printable_category = summarize(by_category)
+    overall_acc = round((total_correct / total_examples) * 100, 2) if total_examples else 0.0
+
+    # Pretty print
+    print("\nSciVideoBench Evaluation Results:")
+    print(f"Overall Accuracy: {overall_acc}%")
+
     print("\nStatistics by Question Type:")
-    for style, stats in printable_results.items():
-        print(f"{style}: {stats['acc']}% (samples: {stats['num']})")
-    
+    for k, v in printable_qtype.items():
+        print(f"{k}: {v['acc']}% (samples: {v['num']})")
+
+    print("\nStatistics by Category:")
+    for k, v in printable_category.items():
+        print(f"{k}: {v['acc']}% (samples: {v['num']})")
+
     return {
-        "overall_acc": round(overall_acc * 100, 2),
-        "by_question_type": printable_results
+        "overall_acc": overall_acc,
+        "by_question_type": printable_qtype,
+        "by_category": printable_category
     }
