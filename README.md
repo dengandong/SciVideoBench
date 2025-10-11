@@ -1,5 +1,9 @@
 # SciVideoBench: Benchmarking Scientific Video Reasoning in Large Multimodal Models
 
+<p align="center">
+  <img src="figs/logo2.png" alt="SciVideoBench Dataset Examples" width="100%">
+</p>
+
 [📄 Project Page](https://scivideobench.github.io/) | [📑 arXiv Paper](https://arxiv.org/abs/2510.08559) | [📂 Dataset](#-license)
 
 
