@@ -8,8 +8,13 @@
 
 
 ---
+## 🔥 News  
 
-## 🔬 Overview  
+- **2025.10** 🎉 SciVideoBench introduced as the **first benchmark for scientific video reasoning**.  
+
+
+
+## 👀 Overview  
 
 Scientific experiments present unique challenges for video-language models (VLMs): precise perception of visual details, integration of multimodal signals (video, audio, transcripts), and complex reasoning across temporal scales. To address this gap, we introduce **SciVideoBench**, the first comprehensive benchmark dedicated to **scientific video reasoning**.  
 
@@ -22,7 +27,7 @@ SciVideoBench evaluates models across **Physics, Chemistry, Biology, and Medicin
 
 *Figure 1: The overall design of SciVideoBench, showing multi-stage data construction, annotation protocol, and evaluation pipeline.*  
 
----
+
 
 ## 🎥 Dataset Examples
 
@@ -32,7 +37,7 @@ SciVideoBench evaluates models across **Physics, Chemistry, Biology, and Medicin
 
 *Figure 2: Examples of SciVideoBench videos and their associated QA pairs across Physics, Chemistry, Biology, and Medicine.*  
 
----
+
 
 ## 📌 Key Features  
 
@@ -45,13 +50,8 @@ SciVideoBench evaluates models across **Physics, Chemistry, Biology, and Medicin
 - **Rich Metadata**: Each QA pair is annotated with discipline, subject, timestamp breakdowns, and rationale.  
 - **Evaluation Protocols**: Compatible with `lmms-eval` for standardized model comparison.  
 
----
 
-## 📰 News  
 
-- **2025.10** 🎉 SciVideoBench introduced as the **first benchmark for scientific video reasoning**.  
-
----
 
 ## 📂 Dataset  
 
@@ -82,7 +82,7 @@ Example QA format:
 }
 ```
 
----
+
 
 ## 🏆 Leaderboard  
 
@@ -159,7 +159,7 @@ accelerate launch --num_processes 8 --main_process_port 12380 -m lmms_eval \
     --batch_size 1 \
     --log_samples \
 ```
----
+
 
 
 ## 📂 License
