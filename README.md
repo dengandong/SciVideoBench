@@ -1,6 +1,6 @@
 # SciVideoBench: Benchmarking Scientific Video Reasoning in Large Multimodal Models
 
-[📄 Project Page](https://scivideobench.github.io/) | [📑 arXiv Paper]() | [📂 Dataset](#-license)
+[📄 Project Page](https://scivideobench.github.io/) | [📑 arXiv Paper](https://arxiv.org/abs/2510.08559) | [📂 Dataset](#-license)
 
 
 ---
@@ -185,7 +185,7 @@ If you use SciVideoBench, please cite our paper:
     @article{deng2025scivideobench,
         title={SciVideoBench: Benchmarking Scientific Video Reasoning in Large Multimodal Models},
         author={Andong Deng and Taojiannan Yang and Shoubin Yu and Lincoln Spencer and Mohit Bansal and Chen Chen and Serena Yeung-Levy and Xiaohan Wang},
-        journal={arXiv preprint arXiv:2501.XXXX},
+        journal={arXiv preprint arXiv:2510.08559},
         year={2025}
     }
 ```
