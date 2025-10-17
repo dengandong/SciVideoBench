@@ -10,7 +10,8 @@
 ---
 ## 🔥 News  
 
-- **2025.10** 🎉 SciVideoBench introduced as the **first benchmark for scientific video reasoning**.  
+- **2025.10.17** 🔥 We evaluate Qwen3-VL on SciVideoBench. Check our leaderboard!.  
+- **2025.10.10** 🎉 SciVideoBench introduced as the **first benchmark for scientific video reasoning**.  
 
 
 
@@ -86,7 +87,7 @@ Example QA format:
 
 ## 🏆 Leaderboard  
 
-> Evaluation results of proprietary and open-source models on **SciVideoBench** (%, higher is better).  
+> Part of the evaluation results of proprietary and open-source models on **SciVideoBench** (%, higher is better).  
 
 | Models              | Overall | Conceptual | Hypothetical | Quantitative | Biology | Chemistry | Medicine | Physics |
 |---------------------|:-------:|:----------:|:------------:|:------------:|:-------:|:---------:|:--------:|:-------:|
