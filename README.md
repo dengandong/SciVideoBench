@@ -10,6 +10,7 @@
 ---
 ## 🔥 News  
 
+- **2025.10.20** 🏆 Honored to share that SciVideoBench received the Best Paper Award (Benchmark Track) at the ICCV 2025 [KnowledgeMR Workshop](https://knowledgemr-workshop.github.io/)! 
 - **2025.10.17** 🔥 We evaluate Qwen3-VL on SciVideoBench. Check our leaderboard!.  
 - **2025.10.10** 🎉 SciVideoBench introduced as the **first benchmark for scientific video reasoning**.  
 
