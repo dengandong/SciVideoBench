@@ -112,16 +112,14 @@ Example QA format:
 
 ## 🧪 Evaluation (via lmms-eval)
 
-SciVideoBench integrates directly with **[lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)** using our task YAML and utils.py.
+SciVideoBench will be integrated into **[lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)** soon.
 
 ### 1) Install (Please refer to lmms-eval)
 
 ```bash
-# lmms-eval + vision extras
-pip install -U lmms-eval
-# or install from source (recommended)
-# git clone https://github.com/EvolvingLMMs-Lab/lmms-eval.git
-# pip install -e lmms-eval[all]
+git clone https://github.com/EvolvingLMMs-Lab/lmms-eval
+cd lmms-eval
+pip install -e .
 ```
 
 ### 2) Repo Layout
