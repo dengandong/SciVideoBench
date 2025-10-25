@@ -9,9 +9,9 @@
 
 ---
 ## 🔥 News  
-
+- **2025.10.17** 🔥 GPT-5 scores 55.7% on SciVideoBench. Check our leaderboard!
 - **2025.10.20** 🏆 Honored to share that SciVideoBench received the Best Paper Award (Benchmark Track) at the ICCV 2025 [KnowledgeMR Workshop](https://knowledgemr-workshop.github.io/)! 
-- **2025.10.17** 🔥 We evaluate Qwen3-VL on SciVideoBench. Check our leaderboard!.  
+- **2025.10.17** 🔥 We evaluate Qwen3-VL on SciVideoBench. Check our leaderboard!
 - **2025.10.10** 🎉 SciVideoBench introduced as the **first benchmark for scientific video reasoning**.  
 
 
@@ -94,7 +94,8 @@ Example QA format:
 |---------------------|:-------:|:----------:|:------------:|:------------:|:-------:|:---------:|:--------:|:-------:|
 | **Random Guess**     | 10.00  | 10.00      | 10.00        | 10.00        | 10.00   | 10.00     | 10.00    | 10.00   |
 | **Human Evaluation** | 17.40  | 18.11      | 18.70        | 14.29        | 15.88   | 16.06     | 21.19    | 18.88   |
-| Gemini-2.5-Pro       | **64.30** | **69.73**  | **67.79**    | **50.61**    | **64.79** | **61.82** | **74.77** | **61.44** |
+| Gemini-2.5-Pro       | **64.30** | **69.73**  | **67.79**    | 50.61    | **64.79** | **61.82** | **74.77** | **61.44** |
+| GPT-5                | 55.70  | 61.35      | 50.65        | **55.10**        | 57.12   | 52.73     | 58.88    | 54.23   |
 | Gemini-2.5-Flash     | 46.40  | 50.81      | 44.16        | 43.27        | 44.01   | 49.70     | 55.14    | 44.83   |
 | InternVL-3-78B       | 38.50  | 56.76      | 39.22        |  9.80        | 37.65   | 37.58     | 46.73    | 37.30   |
 | InternVL-3-14B       | 35.70  | 53.51      | 35.32        |  9.39        | 35.94   | 33.94     | 38.32    | 35.42   |
