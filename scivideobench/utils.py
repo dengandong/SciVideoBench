@@ -3,7 +3,7 @@ import random
 import re
 from pathlib import Path
 from collections import defaultdict
-
+import yaml
 from datetime import timedelta
 
 def convert_time_to_frames_in_question(question, total_duration_sec, total_frames):
@@ -40,11 +40,18 @@ def convert_time_to_frames_in_question(question, total_duration_sec, total_frame
     return question
 
 def scivideobench_doc_to_visual(doc):
+    with open(Path(__file__).parent / "scivideobench.yaml", "r") as f:
+        raw_data = f.readlines()
+        safe_data = []
+        for i, line in enumerate(raw_data):
+            # remove function definition since yaml load cannot handle it
+            if "!function" not in line:
+                safe_data.append(line)
+    dataset_path = yaml.safe_load("".join(safe_data))["dataset_path"]
 
-    dataset_path = doc.get("dataset_path", "scivideobench/")
-    video_dir = Path(dataset_path) / "video_with_text_pil"
+    video_dir = Path(dataset_path)
     video_path = video_dir / f"jove_{doc['video_id']}.mp4"
-    
+
 
     if video_path.exists():
         return [str(video_path)]
@@ -71,7 +78,6 @@ def scivideobench_doc_to_text(doc, lmms_eval_specific_kwargs=None):
         lmms_eval_specific_kwargs = {}
     pre_prompt  = lmms_eval_specific_kwargs.get("pre_prompt", "")
     post_prompt = lmms_eval_specific_kwargs.get("post_prompt", "")
-    print(post_prompt)
 
     duration = doc["video_duration"]
     converted_question = convert_time_to_frames_in_question(doc['question'], duration, int(duration))
@@ -106,11 +112,11 @@ def extract_answer_letter(s):
     ]
     for prefix in answer_prefixes:
         s = s.replace(prefix, "")
-    
+
 
     if len(s.split()) > 16 and not re.search("[ABCDEFGHIJ]", s):
         return ""
-    
+
 
     matches = re.search(r"[ABCDEFGHIJKL]", s)
     if matches is None:
