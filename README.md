@@ -9,7 +9,8 @@
 
 ---
 ## 🔥 News  
-- **2025.10.17** 🚀 GPT-5 achieves 55.7% overall accuracy on SciVideoBench, setting a new record in Quantitative Reasoning (55.1%)!
+- **2025.11.15** 🔥 SciVideoBench is is now integrated into [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)!
+- **2025.10.25** 🚀 GPT-5 achieves 55.7% overall accuracy on SciVideoBench, setting a new record in Quantitative Reasoning (55.1%)!
 - **2025.10.20** 🏆 Honored to share that SciVideoBench received the Best Paper Award (Benchmark Track) at the ICCV 2025 [KnowledgeMR Workshop](https://knowledgemr-workshop.github.io/)! 
 - **2025.10.17** 🔥 We evaluate Qwen3-VL on SciVideoBench. Check our leaderboard!
 - **2025.10.10** 🎉 SciVideoBench introduced as the **first benchmark for scientific video reasoning**.  
@@ -112,7 +113,7 @@ Example QA format:
 
 ## 🧪 Evaluation (via lmms-eval)
 
-SciVideoBench will be integrated into **[lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)** soon.
+SciVideoBench has now been integrated into **[lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)**!
 
 ### 1) Install (Please refer to lmms-eval)
 
